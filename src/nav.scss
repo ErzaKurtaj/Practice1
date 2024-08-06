@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+.nav{
+  background-color: #233652;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  margin-bottom: 20px;
+
+  .title{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+
+    svg{
+      font-size: 40px;
+      text-align: center;
+      margin-top: 2px;
+      margin-right: 7px;
+    }
+  }
+
+  .links{
+    display: flex;
+    color: #fff;
+  }
+
+  .arrow{
+    position: absolute;
+    font-size: 30px;
+    color: #ddd;
+    top:35px;
+    right: 5px;
+    display: none;
+  }
+  .nav-link {
+    margin:0 15px;
+    padding: 15px 10px;
+    position: relative;
+    &:hover{
+      .arrow{
+        display: block;
+      }
+      .nav-megamenu{
+        display: flex;
+      }
+      .inner-link svg{
+        transform: rotate(-180deg)
+      }
+    }
+
+  }
+  .inner-link{
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+  }
+  .auth a{
+    font-size: 19px;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 23px;
+    text-decoration: none;
+  }
+  .signup{
+    background: #427cff;
+
+  }
+  .nav-megamenu{
+    background: #fff;
+    position: absolute;
+    border: 1px solid #eee;
+    width: 675px;
+    left:-150px;
+    top:50px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: none;
+    .menu-link{
+      width:48.5%;
+      margin: 10px 0;
+      border-radius: 8px;
+      padding: 10px 15px;
+      &:hover{
+
+        background: #427cff;
+        h6,p{
+          color: #fff;
+        }
+        .icon{
+          background: #fff;
+        }
+      }
+    }
+    .menu-link a{
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+    }
+    .icon{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid #427cff;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      margin-right: 15px;
+      color: #427cff;
+    }
+    h6{
+      font-size: 18px;
+      color: #111;
+      margin-bottom: 5px;
+    }
+    p{
+      font-size: 18px;
+      color: #111;
+    }
+  }
+}
